@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    font-family: sans-serif;
+
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background:url('/static/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+ body h1{
+    font-size: 70px;
+    font-weight: 300;
+    color: #e98074;
+}
+.header{
+    margin-block: 15px;
+}
+.container{
+    width: 400px;
+    height: min-content;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 28px;
+}
+.searchbox{
+    width: 100%;
+    height: min-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.searchbox input{
+    width: 84%;
+    font-size: 20px;
+    text-transform: capitalize;
+    background-color: #e6f5fe;
+    padding: 12px 16px;
+    border-radius: 14px;
+}
+.searchbox input::placeholder{
+    color: #000;
+}
+.searchbox button{
+    height: 46px;
+    width: 46px;
+    background-color: #e6f5fe;
+    border-radius: 50%;
+    cursor:pointer;
+    font-size: 20px;
+}
+.searchbox button:hover{
+    color:blue;
+    background-color: aqua;
+}
+.weather-body
+{
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-block:20px ;
+
+}
+.weather-body img{
+    width: 50%;
+}
+.weather-box
+{
+    margin-block: 20px;
+    text-align: center;
+}
+.weather-box .temp
+{
+    font-size: 40px;
+    font-weight: 400;
+    position: relative;
+}
+.weather-box .temp sup{
+    font-size: 20px;
+    position: absolute;
+    font-weight: 100;
+}
+.weather-box .discription{
+    font-size: 30px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.weather-box .city{
+    font-size: 30px;
+    font-weight: 800;
+    text-transform: capitalize;
+}
+.weather-detail
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.weather-detail i{
+    font-size: 30px;
+}

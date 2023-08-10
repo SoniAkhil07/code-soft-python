@@ -1,0 +1,13 @@
+{%extends 'layout.html' %}
+{% block body %}
+    <div class="container">
+        <div class="header">
+            <div class="searchbox">
+                <form action="/" method="post">
+                <input type="text" placeholder="Enter City name" name="city" class="inp-box" autocomplete="off">
+                <button class="fa-solid fa-magnifying-glass"></button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

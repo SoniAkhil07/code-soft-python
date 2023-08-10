@@ -1,0 +1,49 @@
+{%extends 'layout.html' %} 
+{% block body %}
+<div class="container">
+     
+    <div class="header">
+        <div class="searchbox">
+            <form action="/" method="post">
+            <input type="text" placeholder="Enter City name" name="city" class="inp-box " autocomplete="off">
+            <button class="fa-solid fa-magnifying-glass"></button>
+            </form>
+        </div>
+
+    </div>
+    <div class="weather-body">
+        <img src="https://openweathermap.org/img/w/{{weather.icon}}.png" alt="weatherImage" class="weather-img">
+        <br>
+        <div class="weather-box">
+             
+                <span class="temp">{{weather.temperature}}<sup>°c</sup></span>
+            <br>
+             <br>
+            <div class="city">
+                <h3>{{weather.city}}</h3>
+            </div>
+        <br>
+            <div class="discription">
+                <h3>{{weather.description}}</h3>
+            </div>
+        </div>
+        <div class="weather-detail">
+            <div class="humidity">
+                <i class="fa-solid fa-droplet"></i>
+                <div class="text">
+                    <span id="humidity">{{weather.humidity}}%</span>
+                    <p>Humidity</p>
+                </div>
+            </div>
+            <div class="wind">
+                <i class="fa-solid fa-wind"></i>
+                <div class="text">
+                    <span id="wind-speed">{{weather.wind}}Km/H</span>
+                    <p>Wind Speed</p>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
