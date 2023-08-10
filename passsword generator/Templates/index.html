@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.css" rel="stylesheet" />
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('/static/bac3.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .card {
+            height: 300px;
+            width: 400px;
+            background: transparent;
+            color: white;
+             
+            box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+        }
+
+        .form-outline .form-control {
+            position: relative;
+            width: 100%;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .card-title {
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 2rem;
+            color: white;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Password Generator</h5>
+            <form action="/pass" method="post">
+                <div class="form-outline">
+                    <input type="number" id="typePhone" class="form-control" name="num" required/>
+                    <label class="form-label" for="typePhone" style="color: white;">Length</label>
+                </div>
+                <div class="form-outline">
+                    <input type="text" id="myInput" class="form-control" value="{{password}}" readonly style="background:transparent ;"/>
+                </div>
+                <button type="submit" class="btn btn-light">Generate</button>
+                <span><button onclick="copyText()" class="btn btn-light">Copy</button></span>
+            </form>
+        </div>
+
+    </div>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.js"></script>
+<script>function copyText() {
+    var copyText = document.getElementById("myInput");
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(copyText.value);
+    alert("Copied the text: " + copyText.value);
+  } </script>
+</body>
+
+</html>
